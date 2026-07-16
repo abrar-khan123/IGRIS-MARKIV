@@ -278,7 +278,7 @@ def _format_text_report(
 def _save_to_desktop(content: str, origin: str, destination: str) -> str:
     ts       = datetime.now().strftime("%Y%m%d_%H%M%S")
     filename = f"flights_{origin}_{destination}_{ts}.txt".replace(" ", "_")
-    desktop  = Path(r"C:\Users\abrar\OneDrive\Desktop")
+    desktop  = Path.home() / "Desktop"
     desktop.mkdir(parents=True, exist_ok=True)
     filepath = desktop / filename
 

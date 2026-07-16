@@ -32,7 +32,7 @@ def _get_desktop() -> Path:
         xdg = os.environ.get("XDG_DESKTOP_DIR", "")
         if xdg and Path(xdg).exists():
             return Path(xdg)
-    return Path(r"C:\Users\abrar\OneDrive\Desktop")
+    return Path.home() / "Desktop"
 
 def _get_downloads() -> Path:
     if _OS == "Linux":
@@ -46,7 +46,7 @@ def _get_documents() -> Path:
         xdg = os.environ.get("XDG_DOCUMENTS_DIR", "")
         if xdg and Path(xdg).exists():
             return Path(xdg)
-    return Path(r"C:\Users\abrar\OneDrive\Documents")
+    return Path.home() / "Desktop"
 
 def _get_pictures() -> Path:
     if _OS == "Linux":

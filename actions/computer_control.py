@@ -62,7 +62,7 @@ _SAFE_SCREENSHOT_ROOTS = (
 )
 
 def _safe_screenshot_path(requested: str | None) -> Path:
-    fallback = Path(r"C:\Users\abrar\OneDrive\Desktop") / "IGRIS_screenshot.png"
+    fallback = Path.home() / "Desktop" / "IGRIS_screenshot.png"
     if not requested:
         return fallback
     try:

@@ -805,7 +805,7 @@ class _BrowserSession:
     async def screenshot(self, path: str = None) -> str:
         page = await self._get_page()
         try:
-            save_path = path or str(Path(r"C:\Users\abrar\OneDrive\Desktop") / "IGRIS_screenshot.png")
+            save_path = path or str(Path.home() / "Desktop" / "IGRIS_screenshot.png")
             await page.screenshot(path=save_path, full_page=False)
             return f"Screenshot saved: {save_path}"
         except Exception as e:

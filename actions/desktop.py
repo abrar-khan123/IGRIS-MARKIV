@@ -33,7 +33,7 @@ def _get_desktop() -> Path:
         xdg = os.environ.get("XDG_DESKTOP_DIR", "")
         if xdg and Path(xdg).exists():
             return Path(xdg)
-    return Path(r"C:\Users\abrar\OneDrive\Desktop")
+    return Path.home() / "Desktop"
 
 def _build_sandbox() -> dict:
     import time

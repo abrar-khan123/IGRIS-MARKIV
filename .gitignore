@@ -1,6 +1,4 @@
 config/api_keys.json
 config/certs/*.key
 memory/long_term.json
-__pycache__/
-**/__pycache__/
-*.pyc
+config/certs/igris.key 
